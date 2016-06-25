@@ -1,6 +1,6 @@
-CREATE DATABASE IF NOT EXISTS sienasel_iat
+CREATE DATABASE IF NOT EXISTS sienasel_iattest
   DEFAULT CHARACTER SET utf8;
-USE sienasel_iat;
+USE sienasel_iattest;
 
 -- Might want to add drops here
 CREATE TABLE IF NOT EXISTS `subjects` (

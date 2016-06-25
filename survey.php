@@ -2,6 +2,8 @@
   session_start();
   if (!isset($_SESSION['started'])) {
     header('Location: /');
+  } else if (!isset($_POST['consent']) || $_POST['consent'] != 'yes') {
+    header('Location: /exit.php');
   }
   require_once('includes/helper.php');
 ?>
@@ -20,7 +22,7 @@
     <div id="page">
     <div class="container">
     <h2>Survey</h2>
-    <p>All fields are optional</p>
+    <p>Please do not refresh pages or use the back button for any part of this study. All fields are optional</p>
     <form role="form" id="survey" action="" method="post">
       <fieldset>
         <div class="form-group">
@@ -29,9 +31,10 @@
             <option selected disabled></option>
             <option value="male">Male</option>
             <option value="female">Female</option>
-            <option value="other">Other </option>
+            <option value="trans">Transgender</option>
+            <option value="other">Other</option>
+            <option value="pnta">Prefer Not to Answer </option>
           </select> 
-          <input type="text" placeholder="Describe" name="otherGender" id="otherGender" style="display:none;" maxlength="25">
         </div>
         
         
@@ -60,18 +63,20 @@
             <option value="95">91-95</option>
             <option value="100">96-100</option>
             <option value="101">100+</option>
+            <option value="-1">Prefer Not to Answer</option>
           </select>
         </div>
         <div class="form-group">
           Ethnicity
           <select name="ethnicity" class="form-control">
             <option selected disabled></option>
-            <option value="AI or AN"> American Indian or Alaska Native</option>
-            <option value="asian"> Asian </option>
-            <option value="black"> Black or African American</option>
-            <option value="NH or PI"> Native Hawaiian or Other Pacific Islander</option>
-            <option value="white"> White</option>
-            <option value="hispanic or latino"> Hispanic or Latino</option>
+            <option value="AI or AN">American Indian or Alaska Native</option>
+            <option value="asian">Asian </option>
+            <option value="black">Black or African American</option>
+            <option value="NH or PI">Native Hawaiian or Other Pacific Islander</option>
+            <option value="white">White</option>
+            <option value="hispanic or latino">Hispanic or Latino</option>
+            <option value="pnta">Prefer Not to Answer</option>
           </select>
         </div>
         <div class="form-group">
@@ -83,12 +88,14 @@
             <option value="2">2</option>
             <option value="3">3-5</option>
             <option value="6">6+</option>
+            <option value="-1">Prefer Not to Answer</option>
           </select>
         </div>
         <div class="form-group">
           What country have you spent most of your life in?
           <select name="country" class="form-control">
             <option selected disabled></option>
+            <option value="---">Prefer Not to Answer</option>
             <option value="USA">United States</option>
             <option value="AFG">Afghanistan</option>
             <option value="ALA">Åland Islands</option>
@@ -361,6 +368,7 @@
             <option value="12">Ph.D.</option>
             <option value="13">MFA</option>
             <option value="14">Other Advanced degree</option>
+            <option value="-1">Prefer Not to Answer</option>
           </select>
         </div>
         <div class="form-group">
@@ -380,6 +388,7 @@
             <option value="10">Social Science or history</option>
             <option value="11">Visual Performing Arts</option>
             <option value="12">Other</option>
+            <option value="-1">Prefer Not to Answer</option>
           </select>
         </div>
         <div class="form-group">
@@ -404,6 +413,9 @@
           </label>
           <label for="7">7<br>
             <input type="radio" class="radio-inline" id="7" name="background" value="7">
+          </label>
+          <label for="-1">Prefer Not to Answer<br>
+            <input type="radio" class="radio-inline" id="7" name="background" value="-1">
           </label>
         </div>
         

@@ -25,12 +25,38 @@
 	<body>
 		<div class="container">
 		<div id="directions">
-			<h2>You have opted to complete the Computer Science/Biology IAT</h2>
+			<h2>Informed Consent</h2>
 			<br>
-			<p>Enter a description here. Please do not refresh pages or use the back button for any part of this study.</p>
+      <p>
+The purpose of this research is to gather data to help train a Machine Learning algorithm to detect if an Implicit Association Test  (IAT) is being taken “naturally” or if the participant is modifying their response in some way.   An IAT measures the strength of a person's implicit association between concepts and qualities.  In the IAT used in this research, participants must categorize words that represent concepts (Computer Science vs. Biology) and qualities (Male vs Female) by pressing corresponding keyboard keys. An IAT typically takes 2-3 minutes to complete. Participants in this study will complete an 8-question survey, take an IAT, read an infographic that shows a response modification technique, and take the IAT again using the technique. The entire process typically takes between 10 and 12 minutes.
+<br><br>
+This research will help psychologist automatically detect if IAT results are possibly invalid.  There is no benefit to the individual participant.  There is no compensation for participation in this research.  Participants are asked to answer survey questions that some may considered sensitive, but answering is not required to participate.  Participants are asked to complete two IATs that some consider tedious and possibly stressful.
+<br><br>
+Participation in this experiment is voluntary. Participants can choose stop at any time without any negative consequence. 
+<br><br>
+Any information provided in this experiment is confidential.   All provided information will be stored in a secured database and only the primary investigator will have access.  Personally identifiable information will not be shared publicly. Only aggregate data (summary data and averages) will be shared publicly for other researchers.
+<br><br>
+If you have any questions about this project now or in the future, feel free to contact the primary investigator (Eric Breimer) who can be reached by e-mail at iat@sienacs.com.  This work has been approved (IRB #**-**-***) by the Institutional Review Board at Siena College which reviews all human subjects research. If you have any questions about the process that is used by Siena to protect participants in research from any harm, please contact Mary Lou D’Allegro at mdallegro@siena.edu.
+<br><br>
+Before participating, you must agree to the following:
+<li> I have read and understand the information above
+<li> I voluntarily agree to participate
+<li> I do not give any legal rights by signing this Informed Consent
+<li> I am 18 years of age or older
+      </p>
 		</div>
-    <form action="survey.php">
-      <button type="submit" class="btn btn-block" id="cont">Continue to survey</button>
+    <form action="survey.php" method='post'>
+        <div class="form-group">
+          <label for="yes">
+            <input type="radio" class="" id="yes" name="consent" value="yes">
+            AGREE: I am 18 years of age or older and I agree to participate
+          </label>
+          <label for="no">
+            <input type="radio" class="" id="no" name="consent" value="no">
+            DISAGREE: I do not wish to participate or I am not 18 years of age or older
+          </label>
+        </div>
+      <button type="submit" class="btn btn-block" id="cont">Continue</button>
     </form>
 		</div>
 	</body>

@@ -2,9 +2,9 @@
   require_once('includes/helper.php');
   session_start(); 
   if (!isset($_SESSION['started'])) {
-    header('Location: /');
+    header('Location: /iat2/git/');
   } else if (!isset($_SESSION['subjectId'])) {
-    header('Location: /survey.php');
+    header('Location: /iat2/git/survey.php');
   }
 
   if (isset($_SESSION['iatTaken']) && $_SESSION['cheatType'] == 0) {

@@ -1,7 +1,7 @@
 <?php
   session_start();
   if (!isset($_SESSION['started'])) {
-    header('Location: /');
+    header('Location: /iat2/git/');
   }
 ?>
 <!DOCTYPE html>

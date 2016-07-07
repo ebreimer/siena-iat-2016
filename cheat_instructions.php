@@ -1,11 +1,11 @@
 <?php
   session_start();
   if (!isset($_SESSION['started'])) { 
-    header('Location: /');
+    header('Location: /iat2/git/');
   } else if (!isset($_SESSION['subjectId'])) {
-    header('Location: /survey.php');
+    header('Location: /iat2/git/survey.php');
   } else if (!isset($_SESSION['score'])) {
-    header('Location: /exit.php');
+    header('Location: /iat2/git/exit.php');
   }
   require_once('includes/helper.php');
   $_SESSION['cheatType'] = rand(1,3);

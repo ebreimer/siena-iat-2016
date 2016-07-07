@@ -1,9 +1,9 @@
 <?php
   session_start();
   if (!isset($_SESSION['started'])) {
-    header('Location: /');
+    header('Location: /iat2/git/');
   } else if (!isset($_POST['consent']) || $_POST['consent'] != 'yes') {
-    header('Location: /exit.php');
+    header('Location: /iat2/git/exit.php');
   }
   require_once('includes/helper.php');
 ?>

@@ -20,7 +20,7 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="includes/css/form.css">
-    <link rel="icon" href="/media/favicon.ico?" type="image/x-icon">
+    <link rel="icon" href="/iat2/git/media/favicon.ico?" type="image/x-icon">
 		
 	</head>
 	<body>
@@ -40,7 +40,7 @@
         } else {
           $image .= 'f';
         }
-        echo "<img id='cheatImage' src='/media/$image.png'></img>";
+        echo "<img id='cheatImage' src='/iat2/git/media/$image.png'></img>";
       ?>
 		</div>
     <form action="iat.php">

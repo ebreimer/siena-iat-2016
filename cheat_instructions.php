@@ -9,6 +9,7 @@
   }
   require_once('includes/helper.php');
   $_SESSION['cheatType'] = rand(1,5);
+  $score = $_SESSION['score'];
 ?>
 <!DOCTYPE html>
 <html lang="en">

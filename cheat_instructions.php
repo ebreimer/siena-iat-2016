@@ -8,7 +8,7 @@
     header('Location: /exit.php');
   }
   require_once('includes/helper.php');
-  $_SESSION['cheatType'] = rand(1,3);
+  $_SESSION['cheatType'] = rand(1,5);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,16 +29,16 @@
 			<h2>How to Change Your Results</h2>
 			<br>
       <?php
-        echo "Cheat type: " . $_SESSION['cheatType'];
         if (false) {
+          echo "Cheat type: " . $_SESSION['cheatType'];
           echo "( ͡° ͜ʖ ͡°)";
         }
-        $image = "cheat$_SESSION[cheatType]-";
+        $image = "s$_SESSION[cheatType]";
         //$image = "cheat1-";
         if ($score > 0) {
-          $image .= 'pos';
+          $image .= 'm';
         } else {
-          $image .= 'neg';
+          $image .= 'f';
         }
         echo "<img id='cheatImage' src='/media/$image.png'></img>";
       ?>

@@ -58,7 +58,7 @@
 				<li>Keep your index fingers on the 'e' and 'i' keys to enable rapid response.</li>
 				<li>Two labels at the top will tell you which words or images go with each key.</li>
 				<li>Each word has a correct classification. Most of these are easy.</li>
-				<li>The test gives no results if you go slowly. Please try to go as quckly as possible.</li>
+				<li>The test gives no results if you go slowly. Please try to go as quickly as possible.</li>
 				<li>Expect to make a few mistakes because of going quickly. That's okay.</li>
 				<li>For best results, avoid distractions and stay focused.</li>
 			</ul>

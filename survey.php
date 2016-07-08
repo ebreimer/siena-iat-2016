@@ -22,11 +22,11 @@
     <div id="page">
     <div class="container">
     <h2>Survey</h2>
-    <p>Please do not refresh pages or use the back button for any part of this study. All fields are optional</p>
+    <p>Please do not refresh the page or use the back button for any part of this study.</p>
     <form role="form" id="survey" action="" method="post">
       <fieldset>
         <div class="form-group">
-          Gender: 
+          Gender 
           <select name="gender" class="form-control">
             <option selected disabled></option>
             <option value="male">Male</option>
@@ -80,7 +80,7 @@
           </select>
         </div>
         <div class="form-group">
-          How many IATs have you previously taken?
+          Number of IATs Previously Taken
           <select name="number_iats" class="form-control">
             <option selected disabled></option>
             <option value="0">0</option>
@@ -92,7 +92,7 @@
           </select>
         </div>
         <div class="form-group">
-          What country have you spent most of your life in?
+          Country
           <select name="country" class="form-control">
             <option selected disabled></option>
             <option value="---">Prefer Not to Answer</option>
@@ -350,7 +350,7 @@
         </div>
         
         <div class="form-group">
-          Education:
+          Education
           <select name="education" class="form-control">
             <option selected disabled></option>
             <option value="0">Elementary School</option>
@@ -372,7 +372,7 @@
           </select>
         </div>
         <div class="form-group">
-          Major field of study or that of your highest degree:
+          Field of Study
           <select name="field" class="form-control">
             <option selected disabled></option>
             <option value="0">Biological sciences/life sciences</option>
@@ -392,7 +392,7 @@
           </select>
         </div>
         <div class="form-group">
-          Background knowledge of computer science (1-Very Low; 4-Basic Knowledge; 7-Very High)<br>
+          Background Knowledge of Computer Science (1-Very Low; 4-Basic Knowledge; 7-Very High)<br>
           <label for="1">1<br>
             <input type="radio" class="radio-inline" id="1" name="background" value="1">
           </label>

@@ -4,7 +4,7 @@
     header('Location: /');
   } else if (!isset($_SESSION['subjectId'])) {
     header('Location: /survey.php');
-  } else if (!isset($_SESSION['score'])) {
+  } else if (!isset($_SESSION['score']) || $_SESSION['cheatType'] != 0) {
     header('Location: /exit.php');
   }
   require_once('includes/helper.php');

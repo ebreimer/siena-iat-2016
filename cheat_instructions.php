@@ -4,7 +4,7 @@
     header('Location: /iat2/git/');
   } else if (!isset($_SESSION['subjectId'])) {
     header('Location: /iat2/git/survey.php');
-  } else if (!isset($_SESSION['score'])) {
+  } else if (!isset($_SESSION['score']) || $_SESSION['cheatType'] != 0) {
     header('Location: /iat2/git/exit.php');
   }
   require_once('includes/helper.php');

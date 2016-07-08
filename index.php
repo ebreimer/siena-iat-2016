@@ -21,8 +21,31 @@
 		<link rel="stylesheet" type="text/css" href="includes/css/form.css">
     <link rel="icon" href="/media/favicon.ico?" type="image/x-icon">
 		
+  <script>
+    /*
+    $('#cont').click(function() {
+        alert('i just wanted to bother u');
+      if ($('input[name="consent"]:checked').val() == undefined)
+        alert("Please select AGREE or DISAGREE.");
+    });
+    */
+      /*
+    $('#yes').on('click', function() {
+      alert('aa');
+      $('#cont').removeClass('disabled');
+      $('#cont').addClass('enabled');
+    });
+       */
+    function onLoad() {
+      $('input[name="consent"]').change(function() {
+        $('#cont').removeClass('disabled');
+        $('#cont').addClass('enabled');
+      });
+    }
+  </script>
+
 	</head>
-	<body>
+	<body onload="onLoad()">
 		<div class="container">
 		<div id="directions">
 			<h2>Informed Consent</h2>
@@ -30,7 +53,7 @@
       <p>
 The purpose of this research is to gather data to help train a Machine Learning algorithm to detect if an Implicit Association Test  (IAT) is being taken “naturally” or if the participant is modifying their response in some way.   An IAT measures the strength of a person's implicit association between concepts and qualities.  In the IAT used in this research, participants must categorize words that represent concepts (Computer Science vs. Biology) and qualities (Male vs Female) by pressing corresponding keyboard keys. An IAT typically takes 2-3 minutes to complete. Participants in this study will complete an 8-question survey, take an IAT, read an infographic that shows a response modification technique, and take the IAT again using the technique. The entire process typically takes between 10 and 12 minutes.
 <br><br>
-This research will help psychologist automatically detect if IAT results are possibly invalid.  There is no benefit to the individual participant.  There is no compensation for participation in this research.  Participants are asked to answer survey questions that some may considered sensitive, but answering is not required to participate.  Participants are asked to complete two IATs that some consider tedious and possibly stressful.
+This research will help psychologists automatically detect if IAT results are possibly invalid.  There is no benefit to the individual participant.  There is no compensation for participation in this research.  Participants are asked to answer survey questions that some may considered sensitive, but answering is not required to participate.  Participants are asked to complete two IATs that some consider tedious and possibly stressful.
 <br><br>
 Participation in this experiment is voluntary. Participants can choose stop at any time without any negative consequence. 
 <br><br>
@@ -56,7 +79,8 @@ Before participating, you must agree to the following:
             DISAGREE: I do not wish to participate or I am not 18 years of age or older
           </label>
         </div>
-      <button type="submit" class="btn btn-block" id="cont">Continue</button>
+      <br> <br> <br> <br>
+      <button type="submit" class="btn btn-block disabled" id="cont">Continue</button>
     </form>
 		</div>
 	</body>

@@ -163,6 +163,9 @@ function sendData(jsonMatrix) {
     if (result === "") {
       resultString = "An error occurred while calculating your score";
     } else {
+      // In case result == -0
+      if (result == 0)
+        result = 0;
       resultString = "IAT Score: " + result + "<br><br>";
       if (result == 0) {
         resultString += "Your score suggests you have no associations between the topics.";
@@ -171,8 +174,10 @@ function sendData(jsonMatrix) {
       } else {
         resultString += "Your score suggests you associate males with biology and females with computer science.";
       }
+      /*
       if (cheatType == 0)
         resultString += "<br>Remember this score for the next part of the study.";
+      */
     }
     $("#results").html(resultString);
     if (cheatType == 0) 

@@ -1,6 +1,5 @@
 <?php
   session_start();
-/*
   if (!isset($_SESSION['started'])) { 
     header('Location: /');
   } else if (!isset($_SESSION['subjectId'])) {
@@ -8,7 +7,6 @@
   } else if (!isset($_SESSION['score']) || $_SESSION['cheatType'] != 0) {
     header('Location: /exit.php');
   }
- */
   require_once('includes/helper.php');
 
   function weighted_rand() {

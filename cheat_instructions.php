@@ -66,8 +66,8 @@
         } else {
           $cheatBlocks = 'f';
         }
-        echo "<img id='cheatImage' src='/iat2/git/media/$image.png'></img>";
         $image .= $cheatBlocks;
+        echo "<img id='cheatImage' src='/iat2/git/media/$image.png'></img>";
         echo "<div id='cheatType' class='hidden'>$_SESSION[cheatType]</div>";
         echo "<div id='cheatBlocks' class='hidden'>$cheatBlocks</div>";
       ?>

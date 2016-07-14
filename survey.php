@@ -358,7 +358,7 @@
             <option value="2">Some High School</option>
             <option value="3">High School Graduate</option>
             <option value="4">Some College</option>
-            <option value="5">Associate's Degreee</option>
+            <option value="5">Associate's Degree</option>
             <option value="6">Bachelor's Degree</option>
             <option value="7">Some Graduate School</option>
             <option value="8">Master's Degree</option>

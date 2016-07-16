@@ -38,3 +38,14 @@ WHERE iats.cheat_type > 0
 GROUP BY iats.subject_id
 HAVING Count(*) > 1;
 
+-- Find the number of VALID IAT pairs
+SELECT Count(*), "VALID" AS status
+FROM subjects
+WHERE EXISTS
+  (SELECT * FROM iats
+  WHERE subjects.subject_id = iats.subject_id
+  AND iats.cheat_type = 0)
+AND EXISTS
+  (SELECT * FROM iats
+  WHERE subjects.subject_id = iats.subject_id
+  AND iats.cheat_type <> 0);
